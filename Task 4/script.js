@@ -10,3 +10,24 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+
+const getModels = async () => {
+    const getResult = await fetch(ENDPOINT);
+    const response = await getResult.json();
+    const output = document.querySelector("#output");
+
+    response.forEach((e, i) => {
+        output.innerHTML += `
+            <div class="model_car">
+                <h1>Brand: ${e.brand}</h1>
+            </div> 
+        `;
+
+        e.models.forEach(el => output.innerHTML += `<p>${el}</p>`);
+    });
+    
+
+    console.log(response);
+}
+
+getModels();

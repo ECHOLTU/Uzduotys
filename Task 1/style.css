@@ -22,7 +22,7 @@
   text-transform: uppercase;
 }
 
-form {
+form, .inputs {
   max-width: 80%;
   margin: 50px auto;
   display: flex;
@@ -62,4 +62,8 @@ form {
   #submit-btn {
     font-size: 2em;
   }
+}
+#output {
+  text-align: center;
+  font-weight: bold;
 }
