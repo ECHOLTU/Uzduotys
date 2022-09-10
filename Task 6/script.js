@@ -19,3 +19,25 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+
+
+const getUserAverageAge = async (masyvas) => {
+  let sum = 0;
+
+  for (const age of masyvas) sum += age.age;
+  let average = sum / masyvas.length;
+
+  console.log(average.toFixed(2));
+}
+
+const getUsersNames = async (masyvas) => {
+  const names = [];
+
+  for (const name of masyvas) names.push(name.name);
+  
+  console.log(names);
+}
+
+getUserAverageAge(users);
+getUsersNames(users);

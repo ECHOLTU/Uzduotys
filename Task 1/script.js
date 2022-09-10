@@ -8,3 +8,18 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const calculate = () => {
+  const kg = document.querySelector("#search").value;
+
+  const lbs = parseInt(kg) * 2.2046;
+  const grams = parseInt(kg) * 1000;
+  const oz = parseInt(kg) * 35.274;
+
+  document.querySelector(".lb").innerHTML = `Svarai: ${lbs}`;
+  document.querySelector(".g").innerHTML = `Gramai: ${grams}`;
+  document.querySelector(".oz").innerHTML = `Unicijos: ${oz}`;
+
+  document.querySelector("#output").style.display = "block";
+
+  console.log({ lb: lbs, g: grams, oz: oz });
+}
